@@ -1,13 +1,13 @@
 import { Component, OnInit, Injector } from '@angular/core';
-import { Validators } from "@angular/forms";
+import { Validators } from '@angular/forms';
 
-import { BaseResourceFormComponent } from "../../../shared/components/base-resource-form/base-resource-form.component"
+import { BaseResourceFormComponent } from '../../../shared/components/base-resource-form/base-resource-form.component'
 
-import { Entry } from "../shared/entry.model";
-import { EntryService } from "../shared/entry.service";
+import { Entry } from '../shared/entry.model';
+import { EntryService } from '../shared/entry.service';
 
-import { Category } from "../../categories/shared/category.model";
-import { CategoryService } from "../../categories/shared/category.service";
+import { Category } from '../../categories/shared/category.model';
+import { CategoryService } from '../../categories/shared/category.service';
 
 @Component({
   selector: 'app-entry-form',
@@ -71,7 +71,7 @@ export class EntryFormComponent extends BaseResourceFormComponent<Entry> impleme
       id: [null],
       name: [null, [Validators.required, Validators.minLength(2)]],
       description: [null],
-      type: ["expense", [Validators.required]],
+      type: ['expense', [Validators.required]],
       amount: [null, [Validators.required]],
       date: [null, [Validators.required]],
       paid: [true, [Validators.required]],
@@ -86,11 +86,11 @@ export class EntryFormComponent extends BaseResourceFormComponent<Entry> impleme
   }
 
   protected creationPageTitle(): string {
-    return "Cadastro de Novo Lançamento";
+    return 'Cadastro de Novo Lançamento';
   }
 
   protected editionPageTitle(): string {
-    const resourceName = this.resource.name || "";
-    return "Editando Lançamento: " + resourceName;
+    const resourceName = this.resource.name || '';
+    return 'Editando Lançamento: ' + resourceName;
   }
 }

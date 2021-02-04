@@ -1,10 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { FormControl } from "@angular/forms";
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-form-field-error',
   template: `
-    <p class="text-danger">
+    <p class='text-danger'>
       {{errorMessage}}
     </p>
   `,
@@ -33,10 +33,10 @@ export class FormFieldErrorComponent implements OnInit {
 
   private getErrorMessage(): string | null {
     if( this.formControl.errors.required )
-      return "dado obrigatório";
+      return 'dado obrigatório';
 
     else if( this.formControl.errors.email)
-      return "formato de email inválido"
+      return 'formato de email inválido'
 
     else if( this.formControl.errors.minlength){
       const requiredLength = this.formControl.errors.minlength.requiredLength;

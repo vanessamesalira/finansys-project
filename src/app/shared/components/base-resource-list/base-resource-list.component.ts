@@ -1,7 +1,7 @@
 import { OnInit } from '@angular/core';
 
-import { BaseResourceModel } from "../../models/base-resource.model";
-import { BaseResourceService } from "../../services/base-resource.service";
+import { BaseResourceModel } from '../../models/base-resource.model';
+import { BaseResourceService } from '../../services/base-resource.service';
 
 export abstract class BaseResourceListComponent<T extends BaseResourceModel> implements OnInit {
 
@@ -22,7 +22,7 @@ export abstract class BaseResourceListComponent<T extends BaseResourceModel> imp
     if (mustDelete){
       this.resourceService.delete(resource.id).subscribe(
         () => this.resources = this.resources.filter(element => element != resource),
-        () => alert("Erro ao tentar excluir!")
+        () => alert('Erro ao tentar excluir!')
       )
     }
   }

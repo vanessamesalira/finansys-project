@@ -1,12 +1,12 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
-import { Category } from "../../categories/shared/category.model";
-import { CategoryService } from "../../categories/shared/category.service";
+import { Category } from '../../categories/shared/category.model';
+import { CategoryService } from '../../categories/shared/category.service';
 
-import { Entry } from "../../entries/shared/entry.model";
-import { EntryService } from "../../entries/shared/entry.service";
+import { Entry } from '../../entries/shared/entry.model';
+import { EntryService } from '../../entries/shared/entry.service';
 
-import currencyFormatter from "currency-formatter"
+import currencyFormatter from 'currency-formatter'
 
 @Component({
   selector: 'app-reports',
